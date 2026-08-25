@@ -73,9 +73,17 @@ export const projects = [
   {
   id: 9, 
   title: "AutoML Platform",
-  description: "istemul propus este un framework de Automated Machine Learning (AutoML) conceput pentru a rezolva eficient problema Combined Algorithm Selection and Hyperparameter Optimization (CASH) sub constrângeri severe de buget computațional.",
+  description: "Framework de Automated Machine Learning (AutoML) conceput pentru a rezolva eficient problema Combined Algorithm Selection and Hyperparameter Optimization (CASH) sub constrângeri severe de buget computațional.",
   tags: ["Python", "AutoML", "Machine Learning", "Big Data"],
   category: "Data Science & Machine Learning",
   githubLink: "https://github.com/nkororo/autoML-SHADE-DEHB-ILS",
+  },
+  {
+  id: 10, 
+  title: "MiniRank",
+  description: "O aplicație minimalistă monitorizarea pozițiilor SEO în motoarele de căutare.",
+  tags: ["PHP", "SQLite", "Opencode", "JavaScript", "CSS"],
+  category: "Web Development",
+  githubLink: "https://github.com/nkororo/minirank",
   }
 ];
