@@ -69,5 +69,13 @@ export const projects = [
   tags: ["React.js", "JSON Server", "JavaScript", "CSS Modules", "REST API"],
   category: "Web Development",
   githubLink: "https://github.com/nkororo/my-thesis-plaform",
+  },
+  {
+  id: 9, 
+  title: "AutoML Platform",
+  description: "istemul propus este un framework de Automated Machine Learning (AutoML) conceput pentru a rezolva eficient problema Combined Algorithm Selection and Hyperparameter Optimization (CASH) sub constrângeri severe de buget computațional.",
+  tags: ["Python", "AutoML", "Machine Learning", "Big Data"],
+  category: "Data Science & Machine Learning",
+  githubLink: "https://github.com/nkororo/autoML-SHADE-DEHB-ILS",
   }
 ];
