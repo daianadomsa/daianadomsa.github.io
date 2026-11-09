@@ -1,0 +1,114 @@
+.skills__levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skills__areas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.level-card,
+.area-card {
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.level-card--featured {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.level-card__head,
+.area-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.level-card h3,
+.area-card h3 {
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.level-card__badge {
+  flex: none;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--accent-ink);
+  border-radius: 0.25rem;
+  background: var(--accent-ink);
+  color: var(--accent-contrast);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.level-card p,
+.area-card p {
+  margin-top: 0.7rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.area-card__label {
+  flex: none;
+  color: var(--text-subtle);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.tag-list li {
+  padding: 0.42rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.4rem;
+  background: var(--champagne);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.level-card--featured .tag-list li {
+  border-color: var(--accent);
+}
+
+@media (max-width: 920px) {
+  .skills__levels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills__areas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-card__head,
+  .area-card__head {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

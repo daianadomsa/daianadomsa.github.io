@@ -1,0 +1,136 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--nav-bg);
+}
+
+.nav__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand__text {
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav__links > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav__links > a:hover {
+  color: var(--accent-ink);
+}
+
+.nav__links .nav__cta {
+  margin-left: 0.4rem;
+  border: 1px solid var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.nav__links .nav__cta:hover {
+  background: var(--accent-ink);
+  color: var(--accent-contrast);
+}
+
+.nav__links .nav__cta app-icon {
+  font-size: 0.95rem;
+}
+
+.nav__toggle {
+  display: none;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.nav__toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+@media (max-width: 760px) {
+  .nav__toggle {
+    display: grid;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav__links--open {
+    display: flex;
+  }
+
+  .nav__links > a {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .nav__links .nav__cta {
+    margin: 0.25rem 0 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .brand__text {
+    display: none;
+  }
+}

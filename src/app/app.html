@@ -1,0 +1,15 @@
+<a class="skip-link" href="#main">Sari la conținut</a>
+
+<app-navbar />
+
+<main id="main">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>&copy; {{ year }} {{ profile.name }}</p>
+
+    <a [href]="profile.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</footer>

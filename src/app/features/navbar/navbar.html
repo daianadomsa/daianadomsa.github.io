@@ -1,0 +1,34 @@
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <span class="brand__mark">{{ profile.initials }}</span>
+      <span class="brand__text">{{ profile.name }}</span>
+    </a>
+
+    <nav id="primary-navigation" class="nav__links" [class.nav__links--open]="menuOpen()">
+      <a href="#skills" (click)="closeMenu()">Competențe</a>
+      <a href="#projects" (click)="closeMenu()">Proiecte</a>
+      <a
+        class="nav__cta"
+        [href]="profile.github"
+        target="_blank"
+        rel="noopener noreferrer"
+        (click)="closeMenu()"
+      >
+        <app-icon name="github" />
+        GitHub
+      </a>
+    </nav>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="primary-navigation"
+      [attr.aria-label]="menuOpen() ? 'Închide meniul' : 'Deschide meniul'"
+    >
+      <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+    </button>
+  </div>
+</header>

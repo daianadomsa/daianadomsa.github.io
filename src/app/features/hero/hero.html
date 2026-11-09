@@ -1,0 +1,41 @@
+<section id="home" class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <h1 id="hero-title">
+        Salut, sunt <span>{{ profile.shortName }}</span
+        >.
+      </h1>
+
+      <p class="hero__subtitle">În căutarea unui rol Entry-Level în IT</p>
+
+      <p class="hero__lead">{{ profile.intro }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">
+          Vezi proiectele
+          <app-icon name="arrow-right" />
+        </a>
+        <a class="btn btn--ghost" href="#skills">Vezi competențele</a>
+      </div>
+
+    </div>
+
+    <aside class="roles-card" aria-labelledby="roles-title">
+      <h2 id="roles-title" class="roles-card__title">Roluri vizate</h2>
+
+      <ul class="roles-list">
+        @for (role of roleTargets; track role.title) {
+          <li class="role">
+            <span class="role__icon" aria-hidden="true">
+              <app-icon name="check" />
+            </span>
+            <div class="role__body">
+              <p class="role__title">{{ role.title }}</p>
+              <p class="role__text">{{ role.description }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+    </aside>
+  </div>
+</section>

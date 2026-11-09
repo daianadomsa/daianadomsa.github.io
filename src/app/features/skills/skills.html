@@ -1,0 +1,49 @@
+<section id="skills" class="section skills">
+  <div class="container">
+    <app-section-heading
+      eyebrow="01 — Competențe"
+      title="Competențe tehnice"
+      lead=" după nivelul de experiență și arii aplicate în proiecte."
+    />
+
+    <div class="skills__levels">
+      @for (level of skillLevels; track level.title) {
+        <article class="level-card" [class.level-card--featured]="level.highlighted">
+          <div class="level-card__head">
+            <h3>{{ level.title }}</h3>
+            <span class="level-card__badge">{{ level.label }}</span>
+          </div>
+
+          <p>{{ level.subtitle }}</p>
+
+          <ul class="tag-list">
+            @for (skill of level.skills; track skill) {
+              <li>{{ skill }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+
+    <div class="skills__areas">
+      @for (area of skillAreas; track area.title) {
+        <article class="area-card">
+          <div class="area-card__head">
+            <h3>{{ area.title }}</h3>
+            @if (area.label) {
+              <span class="area-card__label">{{ area.label }}</span>
+            }
+          </div>
+
+          <p>{{ area.description }}</p>
+
+          <ul class="tag-list">
+            @for (tag of area.tags; track tag) {
+              <li>{{ tag }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>
